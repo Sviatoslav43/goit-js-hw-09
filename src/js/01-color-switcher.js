@@ -13,7 +13,7 @@ refs.start.addEventListener('click', () => {
     timeId = setInterval(() => {
         const body = document.querySelector('body')
         body.style.backgroundColor = getRandomHexColor()
-        
+        refs.start.disabled = true
     },1000)
 })
 
@@ -21,4 +21,5 @@ refs.start.addEventListener('click', () => {
 
 refs.stop.addEventListener('click', () => {
     clearInterval(timeId)
+    refs.start.disabled = false
 })
