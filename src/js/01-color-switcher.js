@@ -10,10 +10,10 @@ function getRandomHexColor() {
 }
 
 refs.start.addEventListener('click', () => {
+    refs.start.disabled = true
     timeId = setInterval(() => {
         const body = document.querySelector('body')
         body.style.backgroundColor = getRandomHexColor()
-        refs.start.disabled = true
     },1000)
 })
 
