@@ -37,8 +37,11 @@ function chooseDate(selectedDates) {
     refs.startBtn.disabled = false;
 
     refs.startBtn.addEventListener('click', () => {
+      
       const timerId = setInterval(() => {
+
         currentDate = new Date().getTime();
+
         const dateDifference = selectedDate - currentDate;
 
         renderTimer(convertMs(dateDifference));
